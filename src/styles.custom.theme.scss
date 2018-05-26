@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+@include mat-core();
+
+$custom-app-primary: mat-palette($mat-purple);
+$custom-app-accent:  mat-palette($mat-pink);
+$custom-app-warn:    mat-palette($mat-orange);
+$custom-app-theme: mat-light-theme($custom-app-primary, $custom-app-accent, $custom-app-warn);
+@include angular-material-theme($custom-app-theme);
+
+
+$alt-app-primary: mat-palette($mat-red);
+$alt-app-accent:  mat-palette($mat-green);
+$alt-app-warn:    mat-palette($mat-lime);
+$alt-app-theme: mat-light-theme($alt-app-primary, $alt-app-accent, $alt-app-warn);
+.alternative{
+    @include mat-button-theme($alt-app-theme);
+}
+
+
+

@@ -3,10 +3,28 @@
 
 @include mat-core();
 
-$custom-app-primary: mat-palette($mat-purple);
+$custom-app-primary: mat-palette($mat-indigo);
 $custom-app-accent:  mat-palette($mat-pink);
 $custom-app-warn:    mat-palette($mat-orange);
 $custom-app-theme: mat-light-theme($custom-app-primary, $custom-app-accent, $custom-app-warn);
+
+.primaryColorBG {
+    background-color: mat-color($custom-app-primary);
+    color : white;
+    font-size: large;
+}
+
+.accentColorBG {
+    background-color: mat-color($custom-app-accent);
+    color : white;
+    font-size: large;
+}
+
+.warnColorBG {
+    background-color: mat-color($custom-app-warn);
+    color : white;
+    font-size: large;
+}
 @include angular-material-theme($custom-app-theme);
 
 
